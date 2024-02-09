@@ -1,8 +1,6 @@
 import * as contactsService from "./contacts.js";
 import { program } from "commander";
 
-// listContacts().then(console.log).catch(console.error);
-
 program
   .option("-a, --action <type>", "choose action")
   .option("-i, --id <type>", "user id")

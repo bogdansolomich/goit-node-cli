@@ -6,10 +6,6 @@ const contactsPath = path.join("db", "contacts.json");
 const updateContacts = (contacts) =>
   fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
 
-// async function writeContacts(contacts) {
-//   return fs.writeFile(contactsPath, JSON.stringify(contacts, null, 2));
-// }
-
 export async function listContacts() {
   const data = await fs.readFile(contactsPath, "utf8");
   return JSON.parse(data);
