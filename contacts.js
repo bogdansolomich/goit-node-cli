@@ -16,7 +16,7 @@ export async function getContactById(contactId) {
 
   const contact = contacts.find((contact) => contact.id === contactId);
 
-  return contact;
+  return contact || null;
 }
 
 export async function removeContact(contactId) {
@@ -24,7 +24,7 @@ export async function removeContact(contactId) {
   const index = contacts.findIndex((contact) => contact.id === contactId);
 
   if (index === -1) {
-    return undefined;
+    return null;
   }
 
   const [deleteFile] = contacts.splice(index, 1);
